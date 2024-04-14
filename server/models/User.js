@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
     {
@@ -18,12 +18,12 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true,
             max: 50,
-            unique: true
+            unique: true,
         },
         password: {
             type: String,
             required: true,
-            min: 5
+            min: 5,
         },
         picturePath: {
             type: String,
@@ -31,7 +31,7 @@ const UserSchema = new mongoose.Schema(
         },
         friends: {
             type: Array,
-            default: []
+            default: [],
         },
         location: String,
         occupation: String,
@@ -42,5 +42,4 @@ const UserSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model("User", UserSchema);
-
 export default User;
